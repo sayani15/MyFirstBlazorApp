@@ -6,6 +6,11 @@ namespace MyFirstBlazorApp.Pages
 {
     public partial class Sayani
     {
+        /// <summary>
+        /// Determines whether a specified number is a happy number.
+        /// </summary>
+        /// <param name="number">The number.</param>
+        /// <param name="interations">The number of interations to test for convergence.</param>
         public bool IsHappyNumber(int number, int interations = 1000000) //number = 7
         {
             for (int i = 0; i < interations; i++)
@@ -46,6 +51,12 @@ namespace MyFirstBlazorApp.Pages
             return sumOfSquares;
         }
 
+        /// <summary>
+        /// Checks for repeated numbers in a set of years.
+        /// </summary>
+        /// <param name="rangeOfYrs">The range of years to search.</param>
+        /// <returns>The number of repeated digits.</returns>
+        /// <exception cref="System.ArgumentOutOfRangeException">Year must be greater than 0.</exception>
         public int YrsInARange(List<int> rangeOfYrs)
         {
             var repeatedDigitCount = 0;
