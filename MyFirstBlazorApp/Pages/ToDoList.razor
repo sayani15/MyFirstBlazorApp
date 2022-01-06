@@ -1,0 +1,44 @@
+﻿@page "/ToDoList"
+
+<h3>ToDoList</h3>
+
+<form>
+
+    <div>
+        @ListElement.name
+    </div>
+
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" placeholder="Enter task name" @bind="ListElement.name">
+    </div>
+
+    <div>
+        <label>Due Date:</label>
+        <input type="date" @bind="ListElement.dueDate">
+    </div>
+    <div class="form-group">
+        <label>Who is responsible for this task?</label>
+        <input type="text" class="form-control" placeholder="Enter name" @bind="ListElement.whoseResponsibility"> 
+    </div>
+    <div class="form-group">
+        <label>Task description details</label>
+        <input type="text" class="form-control" placeholder="Enter description" @bind="ListElement.description">
+    </div>
+   
+    <button type="submit" class="btn btn-primary" @onclick="DisplayElement" >Submit</button>
+</form>
+
+@if (CanDisplayElement)
+{
+<div>
+
+    <p>some text</p>
+    <p>@ListElement.name</p>
+    <p>@ListElement.description</p>
+    <p>@ListElement.dueDate</p>
+    <p>@ListElement.whoseResponsibility</p>
+</div>
+
+}
+
