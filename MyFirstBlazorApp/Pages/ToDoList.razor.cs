@@ -8,15 +8,18 @@ namespace MyFirstBlazorApp.Pages
 {
     public partial class ToDoList
     {
+        
         public ListElement ListElement { get; set; } = new ListElement();
-
-        public bool CanDisplayElement { get; set; } = false;
-
+        
+        /// <summary>
+        /// This makes sure that what the user has typed in is actually saved to 'name'.
+        /// </summary>
+        public bool CanDisplayElement { get; set; } = false;               
         public ToDoList()
         {
             ListElement.name = "hi";
         }
-
+        
         public void DisplayElement()
         {
             CanDisplayElement = true;
